@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ứng dụng thời tiết</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <h1>🌤️ Ứng dụng thời tiết</h1>
+      <form id="search-form" class="search" autocomplete="off">
+        <input
+          id="city-input"
+          type="text"
+          placeholder="Nhập tên thành phố (ví dụ: Hanoi)"
+          required
+        />
+        <button type="submit">Xem thời tiết</button>
+      </form>
+
+      <section id="status" class="status">Nhập thành phố để bắt đầu.</section>
+
+      <section id="weather-card" class="card hidden" aria-live="polite">
+        <h2 id="city-name"></h2>
+        <p class="temp"><span id="temperature"></span>°C</p>
+        <p id="description"></p>
+        <p>💨 Gió: <span id="wind-speed"></span> km/h</p>
+        <p>🕒 Cập nhật: <span id="updated-time"></span></p>
+      </section>
+    </main>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>
